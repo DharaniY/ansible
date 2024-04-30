@@ -1,5 +1,6 @@
 - name: Ping the server
   hosts: web
+  become: yes # -b is adhoc command to become root user
   tasks: #list of tasks to run
   - name: Ping the server
     ansible.builtin.ping:
